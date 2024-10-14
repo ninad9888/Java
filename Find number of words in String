@@ -8,12 +8,22 @@ public class A{
         int l=s.length();
         for(int i=0;i<l;i++){
             if(" ".indexOf(s.charAt(i))!=-1){
-                v++;
-                
-            }
-            
+                v++;   
+            }  
         }
         System.out.println("Words : "+v);
     }
-    
 }
+
+/*
+//Using Split
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        String s=scanner.nextLine();
+        String t[]=s.split(" ");
+        System.out.print(t.length);
+    }
+}
+*/
