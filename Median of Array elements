@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class A{
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter num of elements in Array :");
+        int n=scanner.nextInt();
+        int na[]=new int[n];
+        System.out.println("Enter "+n+" elements :");
+        for(int i=0;i<n;i++){
+            na[i]=scanner.nextInt();
+        }
+        Arrays.sort(na);
+        double m=median(na);
+        System.out.println("Median : "+m);
+    }
+    
+    public static double median(int[] ar){
+        double m;
+        if(ar.length%2==1){
+            m=ar[ar.length/2];
+        }else{
+            m= (ar[(ar.length/2)-1] + ar[ar.length/2])/2.0;
+        }
+        return m; 
+    }
+}
