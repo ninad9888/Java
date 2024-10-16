@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class A{
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter num of elements :");
+        int n=scanner.nextInt();
+        System.out.println("Enter "+n+" elements :");
+        int ar[]=new int[n];
+        for(int i=0;i<n;i++){
+            ar[i]=scanner.nextInt();
+        }
+        System.out.println("Entered elements are "+Arrays.toString(ar));
+        int mis = mis(ar);
+        System.out.println("Missing number is :"+mis);
+    }
+    
+    public static int mis(int[] ar){
+        Arrays.sort(ar);
+        int mis=0;
+        for(int i=1;i<ar.length;i++){
+            if(ar[i]-ar[i-1]!=1){
+                mis=ar[i]-1;
+            }
+        }
+        return mis;
+    }
+}
