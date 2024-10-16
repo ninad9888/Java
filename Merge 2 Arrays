@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class A{
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter num of elements in array 1 :");
+        int n=scanner.nextInt();
+        int na[]=new int[n];
+        System.out.println("Enter "+n+" elements :");
+        for(int i=0;i<n;i++){
+            na[i]=scanner.nextInt();
+        }
+        
+        System.out.println("Elements of merged Array : "+Arrays.toString(na));
+        
+        System.out.println("Enter num of elements in array 2 :");
+        int m=scanner.nextInt();
+        int ma[]=new int[m];
+        System.out.println("Enter "+m+" elements :");
+        for(int i=0;i<m;i++){
+            ma[i]=scanner.nextInt();
+        }
+        
+        System.out.println("Elements of Array 2 : "+Arrays.toString(ma));
+        
+        System.out.println();
+        
+        int mr[]=new int[na.length+ma.length];
+        
+        for(int i=0;i<n;i++){
+            mr[i]=na[i];
+        }
+        for(int j=0;j<m;j++){
+            mr[n+j]=ma[j];
+        }
+        
+        System.out.println("Elements of merged Array : "+Arrays.toString(mr));
+    }
+}
