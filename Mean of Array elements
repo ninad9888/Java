@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class A{
+    public static void main(String []args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter number of elements of Array : ");
+        int n=scanner.nextInt();
+        int ar[]=new int[n];
+        System.out.println("Enter "+n+" elements of Array : ");
+        for(int i=0;i<n;i++){
+            ar[i]=scanner.nextInt();
+        }
+        double m=mean(ar);
+        System.out.println("Mean of Array elements is : "+m);
+    }
+    
+    public static double mean(int[] ar){
+        double m,s=0.0;
+        for(int i=0;i<ar.length;i++){
+            s=s+ar[i];
+        }
+        m=s/ar.length;
+        return m;
+    }
+}
